@@ -1,0 +1,52 @@
+<html>
+<head>
+    <style>
+        #d6{
+            margin-top: -10px;
+            background-color: rgb(229, 236, 240);
+            border-radius: 25px;
+            height: 550px;
+            padding: 20px;
+        }
+        h1{text-align: center;
+        font-size: 40px;}
+        img{
+            float: left;
+            border-top-right-radius: 220px;
+            border-bottom-right-radius: 220px;
+            border-bottom-left-radius: 220px;
+            padding-left: 50px;
+            height: 400px;
+            padding-right: 5px;
+        }
+        input{
+            margin: 10px;
+            width: 40%;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            border-radius: 30px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    {% include 'header.html' %}
+<div id="d6">
+    <h1>Contact Us</h1>
+    <img src="https://th.bing.com/th/id/OIP.cJIVil0nuf3Jvn_DoDXivQHaG0?pid=ImgDet&rs=1" alt="broken link"><br>
+<div id='d7'>
+    <form action="{% url 'contact' %}" method="post">
+        {% csrf_token %}
+        <input type="text" name='name' placeholder="Enter Name "><br>
+        <input type="email" name='email' placeholder="Enter email "><br>
+        <input type="number" name='phone_no' placeholder="Enter Phone_no."><br>
+        <input type="text" name='subj' placeholder="Subject"><br>
+        <input type="textarea" name='desc' placeholder="Describe Issue"><br>
+        <input type="submit" value="Submit" name='submit'>
+     </form>
+</div>
+
+</div>
+{% include 'footer.html' %}
+</body>
+</html>

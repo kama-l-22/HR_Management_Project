@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Services</title>
+    <style>
+        table{border-collapse: saperate;border-spacing:2px 1px;}
+        th{background-color: rgb(83, 83, 205);color:black;padding:10px;width: 150px;}
+        td{width: 150px;text-align: center;padding:5px;background-color: rgb(157, 157, 235);color: white;}
+        .l2 a{text-decoration: none;color: rgb(109, 42, 24);border: 1px solid black;padding: 5px;}
+        .l2{padding-top: 65px;font-size: 20px;}
+        #d9{float: left;height: auto;display: inline;margin-left: 5px;margin-right: 40px;width: 260px;background-color: rgb(229, 236, 240);}
+        #d3{clear: both;margin-top:auto;display: inline-block;}
+        #d11{clear: both;}
+        button{height: 32px;width: 95px;font-size: 22px;}
+        li a:hover{background-color:pink;}
+    </style>
+</head>
+<body>
+    {% include 'header.html' %}
+
+        <div id="d9">
+            <ul><li class='l2'><a href="/empdata">Employee Details</a></li>
+                <li class='l2'><a href="/addemp">Add Employee</a></li>
+                <li class='l2'><a href="/departments">Departments</a></li>
+                <li class='l2'><a href="/adddept">Add Departments</a></li>
+                <li class='l2'><a href="/queries">Queries</a></li>
+            </ul>
+        </div>
+        <div id="d11"> 
+        <center><button onclick="window.location.href = '/logout'">Logout</button></center>
+        </div>
+
+    {% include 'footer.html' %}
+</body>
+</html>

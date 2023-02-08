@@ -1,0 +1,4 @@
+django
+python 
+mysqlclient
+pillow in python.
